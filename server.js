@@ -10,14 +10,12 @@ User = require('./api/models/userListModel');
 
 mongoose.Promise = global.Promise;
 mongoose.set('useCreateIndex', true);
-mongoose.connect(
-  'mongodb+srv://admin:admin@cluster0-yejh3.gcp.mongodb.net/test?retryWrites=true&w=majority',
-  { useNewUrlParser: true },
-  function(error) {
-    if (error) throw error;
-    console.log('Successfully connected');
-  }
-);
+mongoose.connect(process.env.MONGO_URL, { useNewUrlParser: true }, function(
+  error
+) {
+  if (error) throw error;
+  console.log('Successfully connected');
+});
 
 app.use(cors());
 app.use(bodyParser.urlencoded({ extended: true }));
@@ -27,13 +25,13 @@ const userRouter = require('./api/routes/userRouter');
 
 app.use(userRouter);
 
-app.use(errorHandler)
+app.use(errorHandler);
 
-function errorHandler (err, req, res, next) {
-  console.error(err)
+function errorHandler(err, req, res, next) {
+  console.error(err);
   let newError = {
-    message: err.message,
-  }
+    message: err.message
+  };
   res.status(500).send(newError);
 }
 
