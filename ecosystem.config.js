@@ -5,7 +5,7 @@ module.exports = {
       script: 'server.js',
       watch: false,
       env: {
-        PORT: 3000,
+        PORT: 5000,
         NODE_ENV: 'development',
         MONGO_URL:
           'mongodb+srv://admin:admin@cluster0-yejh3.gcp.mongodb.net/test?retryWrites=true&w=majority'

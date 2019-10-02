@@ -2,6 +2,11 @@ const express = require('express');
 const bodyParser = require('body-parser');
 const mongoose = require('mongoose');
 const cors = require('cors');
+const process = require('process')
+
+//Readind .env file
+const dotenv = require('dotenv');
+dotenv.config();
 
 app = express();
 port = process.env.PORT || 3000;
