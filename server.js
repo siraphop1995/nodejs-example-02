@@ -11,7 +11,7 @@ dotenv.config();
 app = express();
 port = process.env.PORT || 3000;
 
-User = require('./api/models/userListModel');
+User = require('./src/models/userListModel');
 
 mongoose.Promise = global.Promise;
 mongoose.set('useCreateIndex', true);
@@ -26,7 +26,7 @@ app.use(cors());
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
 
-const userRouter = require('./api/routes/userRouter');
+const userRouter = require('./src/routes/userRouter');
 
 app.use(userRouter);
 
