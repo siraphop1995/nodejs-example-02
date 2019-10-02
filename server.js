@@ -2,7 +2,7 @@ const express = require('express');
 const bodyParser = require('body-parser');
 const mongoose = require('mongoose');
 const cors = require('cors');
-const process = require('process')
+const process = require('process');
 
 //Readind .env file
 const dotenv = require('dotenv');
@@ -40,6 +40,6 @@ function errorHandler(err, req, res, next) {
   res.status(500).send(newError);
 }
 
-app.listen(port);
-
-console.log('Server started on : ' + port);
+app.listen(port, () => {
+  console.log('Start listen on port: ' + port);
+});
