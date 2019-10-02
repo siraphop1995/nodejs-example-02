@@ -3,6 +3,7 @@ const bodyParser = require('body-parser');
 const mongoose = require('mongoose');
 const cors = require('cors');
 const process = require('process');
+const errorHandler = require('./src/utils/errorHandler')
 
 //Readind .env file
 const dotenv = require('dotenv');
@@ -32,13 +33,13 @@ app.use(userRouter);
 
 app.use(errorHandler);
 
-function errorHandler(err, req, res, next) {
-  console.error(err);
-  let newError = {
-    message: err.message
-  };
-  res.status(500).send(newError);
-}
+// function errorHandler(err, req, res, next) {
+//   console.error(err);
+//   let newError = {
+//     message: err.message
+//   };
+//   res.status(500).send(newError);
+// }
 
 app.listen(port, () => {
   console.log('Start listen on port: ' + port);
