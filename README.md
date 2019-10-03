@@ -1,6 +1,6 @@
-# Starter Kit (Express-02)
+# Express (Starter Kit 02)
 
-A template tp start using express
+A template to start using express
 
 ## Dependencies
 - [express](https://github.com/expressjs/express)
@@ -9,8 +9,16 @@ A template tp start using express
 - [http-status](https://github.com/alexsasharegan/http-status)
 - [dotenv](https://github.com/motdotla/dotenv)
 
+## Installation
+
+```
+npm install --save
+```
+
 ## Usage
+```
 Test server locally: `npm start`  
+```
 
 Exposed routes are as follows:
 
