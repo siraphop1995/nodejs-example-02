@@ -11,10 +11,19 @@ A template to start using express
 
 ## Installation
 
+Install dependencies
 ```
 npm install --save
 ```
-
+Start docker at port `27017`:  
+```
+docker run -d --name mongo -p 27017:27017 mongo
+```
+Create a file named `.env` with the content below:  
+```
+PORT=3000
+MONGO_URL=mongodb://localhost:27017/datana
+```
 ## Usage
 Test server locally
 ```
