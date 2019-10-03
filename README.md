@@ -13,6 +13,8 @@
 - [express](https://github.com/expressjs/express)
 - [mongoose](https://github.com/Automattic/mongoose)
 - [cors](https://github.com/expressjs/cors)
+- [http-status](https://github.com/alexsasharegan/http-status)
+- [dotenv](https://github.com/motdotla/dotenv)
 
 ## <a name="feature"></a> Feature
 
