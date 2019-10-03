@@ -32,7 +32,7 @@ Routes:
 ## Table
 These are example table for `README.md`
 
-| Example | Description |
-| ------- | ----------- |
-| `Ex01` | Desc 01 |
-| `Ex02` | Desc 02 |
+| Example | Description | Usage |
+| ------- | ----------- | ----- |
+| `Ex01` | Desc 01 | Test |
+| `Ex02` | Desc 02 | Test |
