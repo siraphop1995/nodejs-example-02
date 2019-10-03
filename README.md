@@ -1,9 +1,9 @@
-###Nodejs (Express) starter kit 02
+# Nodejs (Express) starter kit 02
 
 ###Feature
 1.  pm2
 
-2.  ?????
+2.  errorHandler (seperate file)
 
 ###Installing & Running
 To install and run simply follow these steps:

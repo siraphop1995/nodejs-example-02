@@ -3,7 +3,7 @@ const bodyParser = require('body-parser');
 const mongoose = require('mongoose');
 const cors = require('cors');
 const process = require('process');
-const errorHandler = require('./src/utils/errorHandler')
+const errorHandler = require('./src/utils/errorHandler');
 
 //Readind .env file
 const dotenv = require('dotenv');
@@ -14,11 +14,13 @@ port = process.env.PORT || 3000;
 
 User = require('./src/models/userListModel');
 
-mongoose.Promise = global.Promise;
+mongoose.Promise = require('bluebird');
+const mongooseConfig = {
+  useNewUrlParser: true,
+  useCreateIndex: true
+};
 mongoose.set('useCreateIndex', true);
-mongoose.connect(process.env.MONGO_URL, { useNewUrlParser: true }, function(
-  error
-) {
+mongoose.connect(process.env.MONGO_URL, mongooseConfig, error => {
   if (error) throw error;
   console.log('Successfully connected');
 });
@@ -28,18 +30,9 @@ app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
 
 const userRouter = require('./src/routes/userRouter');
-
 app.use(userRouter);
 
 app.use(errorHandler);
-
-// function errorHandler(err, req, res, next) {
-//   console.error(err);
-//   let newError = {
-//     message: err.message
-//   };
-//   res.status(500).send(newError);
-// }
 
 app.listen(port, () => {
   console.log('Start listen on port: ' + port);
