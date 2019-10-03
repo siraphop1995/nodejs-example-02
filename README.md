@@ -22,7 +22,7 @@ docker run -d --name mongo -p 27017:27017 mongo
 Create a file named `.env` with the content below:  
 ```
 PORT=3000
-MONGO_URL=mongodb://localhost:27017/datana
+MONGO_URL=mongodb://localhost:27017/user
 ```
 ## Usage
 Test server locally
