@@ -20,7 +20,9 @@
 
 2.  errorHandler
 
-2.  docker mongodb
+3.  docker mongodb
+
+3.  environment file
 
 ## <a name="prerequisite"></a> Prerequisite
 
