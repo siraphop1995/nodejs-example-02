@@ -19,7 +19,6 @@ const mongooseConfig = {
   useNewUrlParser: true,
   useCreateIndex: true
 };
-mongoose.set('useCreateIndex', true);
 mongoose.connect(process.env.MONGO_URL, mongooseConfig, error => {
   if (error) throw error;
   console.log('Successfully connected');
