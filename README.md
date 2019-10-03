@@ -1,30 +1,49 @@
-# Express (Starter Kit 02)
+# Express (Starter Kit 01)
 
-A template to start using express
+> A template to start using express
 
-## Dependencies
+## <a name="contents"></a> Contents
+ - [Dependencies](#dependencies)
+ - [Feature](#feature)
+ - [Prerequisite](#prerequisite)
+ - [Installation](#installation)
+ - [Usage](#usage)
+
+## <a name="dependencies"></a> Dependencies
 - [express](https://github.com/expressjs/express)
 - [mongoose](https://github.com/Automattic/mongoose)
 - [cors](https://github.com/expressjs/cors)
-- [http-status](https://github.com/alexsasharegan/http-status)
-- [dotenv](https://github.com/motdotla/dotenv)
 
-## Installation
+## <a name="feature"></a> Feature
+
+1.  pm2
+
+2.  errorHandler
+
+## <a name="prerequisite"></a> Prerequisite
+
+Docker mongo at port `27017`:  
+```
+docker run -d --name mongo -p 27017:27017 mongo
+```
+PM2
+```
+npm install -g pm2
+```
+
+## <a name="installation"></a> Installation
 
 Install dependencies
 ```
 npm install --save
 ```
-Start docker at port `27017`:  
-```
-docker run -d --name mongo -p 27017:27017 mongo
-```
+
 Used following local setting for `.env` file:  
 ```
 PORT=3000
 MONGO_URL=mongodb://localhost:27017/user
 ```
-## Usage
+## <a name="usage"></a> Usage
 Test server locally
 ```
 npm start
@@ -45,3 +64,12 @@ These are example table for `README.md`
 | ------- | ----------- | ----- |
 | `Ex01` | Desc 01 | Test |
 | `Ex02` | Desc 02 | Test |
+
+> **Note:** This README.me can be use as guideline
+```javascript
+module.exports = {
+  'Example': {
+
+  }
+}
+```
