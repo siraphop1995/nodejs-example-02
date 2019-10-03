@@ -1,4 +1,4 @@
-# Express (Starter Kit 01)
+# Express (Starter Kit 02)
 
 > A template to start using express
 
