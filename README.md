@@ -20,6 +20,8 @@
 
 2.  errorHandler
 
+2.  docker mongodb
+
 ## <a name="prerequisite"></a> Prerequisite
 
 Docker mongo at port `27017`:  
@@ -41,7 +43,7 @@ npm install --save
 Used following local setting for `.env` file:  
 ```
 PORT=3000
-MONGO_URL=mongodb://localhost:27017/user
+MONGO_URL=mongodb://localhost:27017/express02
 ```
 ## <a name="usage"></a> Usage
 Test server locally

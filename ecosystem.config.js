@@ -1,13 +1,12 @@
 module.exports = {
   apps: [
     {
-      name: 'example',
+      name: 'express02',
       script: 'server.js',
       env: {
         PORT: 3000,
         NODE_ENV: 'development',
-        MONGO_URL:
-          'mongodb+srv://admin:admin@cluster0-yejh3.gcp.mongodb.net/test?retryWrites=true&w=majority'
+        MONGO_URL: 'mongodb://localhost:27017/express02'
       }
     }
   ].map(service => {
