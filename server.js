@@ -26,12 +26,14 @@ mongoose.connect(process.env.MONGO_URL, mongooseConfig, error => {
 app.use(cors());
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
-app.use(errorHandler);
 
 //Model and router
 User = require('./src/models/userListModel');
 const userRouter = require('./src/routes/userRouter');
 app.use(userRouter);
+
+//Error handler
+app.use(errorHandler);
 
 //Listen port
 app.listen(port, () => {
